@@ -1,16 +1,42 @@
-# EmuELEC  
-Retro emulation for Amlogic devices.
-Based on  [CoreELEC](https://github.com/CoreELEC/CoreELEC) and [Lakka](https://github.com/libretro/Lakka-LibreELEC) with tidbits from [Batocera](https://github.com/batocera-linux/batocera.linux). I just combine them with [Batocera-Emulationstation](https://github.com/batocera-linux/batocera-emulationstation) and some standalone emulators ([Advancemame](https://github.com/amadvance/advancemame), [PPSSPP](https://github.com/hrydgard/ppsspp), [Reicast](https://github.com/reicast/reicast-emulator), [Amiberry](https://github.com/midwan/amiberry) and others). 
+# EmuELEC — X96 X6 Fork
+
+**This branch is a fork of EmuELEC with dedicated support for the X96 X6 Android box (RK3566).**
+
+This release is intended as a standalone image for the X96 X6, with the following enhancements:
+
+- Native support for X96 X6 hardware (RK3566)
+- Realtek RTL8822CS WiFi/Bluetooth driver
+- All USB ports functional
+- Built-in segment VFD display: clock, boot animation, status icons
+- Native IR remote support
+- Automatic timezone setup by IP after network connection
+- Correct platform and CPU model display
+- Updated DuckStation settings and hotkeys
+- Device-specific optimizations and bugfixes
+
+This fork is maintained separately for X96 X6 users. The release image will be uploaded to GitHub for easy installation.
 
 ---
+
+## Original EmuELEC description follows:
+
+# EmuELEC
+
+Retro emulation for Amlogic devices.
+Based on [CoreELEC](https://github.com/CoreELEC/CoreELEC) and [Lakka](https://github.com/libretro/Lakka-LibreELEC) with tidbits from [Batocera](https://github.com/batocera-linux/batocera.linux). I just combine them with [Batocera-Emulationstation](https://github.com/batocera-linux/batocera-emulationstation) and some standalone emulators ([Advancemame](https://github.com/amadvance/advancemame), [PPSSPP](https://github.com/hrydgard/ppsspp), [Reicast](https://github.com/reicast/reicast-emulator), [Amiberry](https://github.com/midwan/amiberry) and others).
+
+---
+
 [![GitHub Release](https://img.shields.io/github/release/EmuELEC/EmuELEC.svg)](https://github.com/EmuELEC/EmuELEC/releases/latest)
 [![GPL-2.0 Licensed](https://shields.io/badge/license-GPL2-blue)](https://github.com/EmuELEC/EmuELEC/blob/master/licenses/GPL2.txt)
 [![Discord](https://img.shields.io/badge/chat-on%20discord-7289da.svg?logo=discord)](https://discord.gg/jQWCFwTn5T)
 
 ### ⚠️**IMPORTANT**⚠️
+
 #### EmuELEC is now aarch64 ONLY, compiling and using the ARM version after version 3.9 is no longer supported. Please have a look at the master_32bit branch if you want to build the 32-bit version.
 
 ---
+
 ## Development
 
 ### Build prerequisites
@@ -22,6 +48,7 @@ $ apt install gcc make git unzip wget xz-utils libsdl2-dev libsdl2-mixer-dev lib
 ```
 
 ### Building EmuELEC
+
 To build EmuELEC locally do the following:
 
 ```
@@ -32,22 +59,25 @@ $ PROJECT=Amlogic-ce DEVICE=Amlogic-ng ARCH=aarch64 DISTRO=EmuELEC make image
 ```
 
 For the Odroid GO Advance/Super:
+
 ```
 $ PROJECT=Rockchip DEVICE=OdroidGoAdvance ARCH=aarch64 DISTRO=EmuELEC make image
 ```
 
 Note: In some cases you may also need to install the tzdata, xfonts-utils and/or lzop packages.
+
 ```
 $ apt install tzdata xfonts-utils lzop
 ```
 
-
 **Remember to use the proper DTB for your device!**
 
 ### Submitting patches
+
 Please create a pull request with the changes you made in the dev branch and make sure to include a brief description of what you changed and why you did it.
 
 ## Get in touch
+
 If you have a question, suggestions for new features, or need help configuring or installing EmuELEC, please visit [our forum](https://emuelec.org/). You may also want to visit our [wiki](https://github.com/EmuELEC/EmuELEC/wiki) or join our [Discord](https://discord.gg/jQWCFwTn5T).
 
 **EmuELEC DOES NOT INCLUDE KODI**
