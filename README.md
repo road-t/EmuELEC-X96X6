@@ -1,10 +1,10 @@
 # EmuELEC — X96 X6 Fork
 
-**This branch is a fork of EmuELEC with dedicated support for the X96 X6 Android box (RK3566).**
+This branch is a fork of EmuELEC with dedicated support for the **X96 X6** Android box (RK3566).
 
-This release is intended as a standalone image for the X96 X6, with the following enhancements:
+# Key features:
 
-- Native support for X96 X6 hardware (RK3566)
+- Native support for **X96 X6** hardware (**RK3566**)
 - Realtek RTL8822CS WiFi/Bluetooth driver
 - All USB ports functional
 - Built-in segment VFD display: clock, boot animation, status icons
@@ -14,7 +14,25 @@ This release is intended as a standalone image for the X96 X6, with the followin
 - Updated DuckStation settings and hotkeys
 - Device-specific optimizations and bugfixes
 
-This fork is maintained separately for X96 X6 users. The release image will be uploaded to GitHub for easy installation.
+## Download & Installation
+
+1. Download the latest **X96 X6** image from the [releases page](https://github.com/road-t/EmuELEC-X96X6/releases/).
+2. Flash the image to a microSD card using [Balena Etcher](https://www.balena.io/etcher/) or a similar tool.
+3. The image is fully preconfigured for **X96 X6** no dtb or config manipulations needed.
+
+**N.B.** _The first boot will take a bit longer as it sets up the system.
+Do not turn off the device while the `Init` label is displayed on the VFD._
+
+## Known issues
+
+- After establishing network connection, the timezone is auto-detected and set, but the VFD clock may take up
+  to couple of minutes to update; the interface can freeze up for a few seconds during this time as well
+
+## Notes
+
+- The build has been tested on the 4Gb RAM version of **X96 X6**, but should work fine on the major versions as well
+
+Feel free to test, open issues and submit PRs if you find any problems or have suggestions for improvements!
 
 ---
 
